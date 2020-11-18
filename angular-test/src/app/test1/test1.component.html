@@ -1,0 +1,20 @@
+<h3>Problem 1 : Inflection Point</h3>
+<p><b>Problem Statement:</b>
+Given an array of numbers find the inflection point (index) where the part of the array to the left & to the right of the inflection point (index) have EQUAL sum. If there is no inflection point, you can return -1. What is the time complexity & space complexity of your algorithm ? Is this the optimal solution?
+</p>
+<p><b>Example-1:</b> A = [1, 2, 3, 4, 5, 5, 2, 4, 4]. <br>
+    Inflection point = 4, as  A[0]+A[1]+A[2]+A[3] +A[4] = A[5]+A[6]+A[7]+A[8] = 15 <br>
+    <b>Example-2:</b> A = [-4, 3, 2, 14]. <br>
+    Inflection point = -1, there is no left subarray whose sum is equal to right subarray</p>
+<hr>
+<br>
+<h3>Solution:</h3>
+<h4>Add to array:</h4>
+<input #val type="text" class="form-control" autofocus/>&nbsp;
+<small #error style="color: #dc3545!important;">
+    {{errorMsg}}
+</small><br><br>
+<button (click)="addToArray(val.value)" class="form-control">Add</button> &nbsp;
+<button (click)="clearArray()" class="form-control">Clear</button>
+<p>{{array| json}}</p>
+<p><b>Result: <span>{{result}}</span><span *ngIf="result==-1">, there is no left subarray whose sum is equal to right subarray</span></b></p>
